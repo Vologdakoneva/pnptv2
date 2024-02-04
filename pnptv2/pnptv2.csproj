@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53C7C5CC-FA84-4196-860A-156C0112BDF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pnptv</RootNamespace>
+    <AssemblyName>pnptv_V2</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\movie.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Extensions, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Extensions, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Reporting, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="lcpi.data.oledb.net4_5, Version=1.9.0.3592, Culture=neutral, PublicKeyToken=ff716095e8002e7e, processorArchitecture=MSIL" />
+    <Reference Include="lcpi.lib.net4_5, Version=2.2.0.1687, Culture=neutral, PublicKeyToken=ff716095e8002e7e" />
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog">
+      <HintPath>..\..\..\admin2020win\packages\DataConnectionDialog.1.2\Lib\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionModule.cs" />
+    <Compile Include="CustomAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomAppointmentForm.Designer.cs">
+      <DependentUpon>CustomAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConnectionConfiguration.cs" />
+    <Compile Include="dmDoctor.cs">
+      <DependentUpon>dmDoctor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dmSchedule.cs">
+      <DependentUpon>dmSchedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dmSchedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dmSchedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDatabase.designer.cs">
+      <DependentUpon>EditDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEvent.Designer.cs">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBaseVidget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaseVidget.Designer.cs">
+      <DependentUpon>fBaseVidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCopyScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCopyScheduler.Designer.cs">
+      <DependentUpon>fCopyScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fFindReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fFindReplace.Designer.cs">
+      <DependentUpon>fFindReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fGetFreeResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGetFreeResource.Designer.cs">
+      <DependentUpon>fGetFreeResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRaspVidget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRaspVidget.Designer.cs">
+      <DependentUpon>fRaspVidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fShowInMonior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fShowInMonior.Designer.cs">
+      <DependentUpon>fShowInMonior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDataConnectionConfiguration.cs" />
+    <Compile Include="LoginData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginData.designer.cs">
+      <DependentUpon>LoginData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="dmDoctor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dmDoctor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="qWorkPlace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qWorkPlace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleTimeLine.cs" />
+    <Compile Include="SetupListDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupListDatabase.designer.cs">
+      <DependentUpon>SetupListDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraSchedulerReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraSchedulerReport1.Designer.cs">
+      <DependentUpon>XtraSchedulerReport1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CustomAppointmentForm.resx">
+      <DependentUpon>CustomAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomAppointmentForm.ru.resx">
+      <DependentUpon>CustomAppointmentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDatabase.resx">
+      <DependentUpon>EditDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEvent.resx">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaseVidget.resx">
+      <DependentUpon>fBaseVidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCopyScheduler.resx">
+      <DependentUpon>fCopyScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fFindReplace.resx">
+      <DependentUpon>fFindReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fGetFreeResource.resx">
+      <DependentUpon>fGetFreeResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRaspVidget.resx">
+      <DependentUpon>fRaspVidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fShowInMonior.resx">
+      <DependentUpon>fShowInMonior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginData.resx">
+      <DependentUpon>LoginData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetupListDatabase.resx">
+      <DependentUpon>SetupListDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraSchedulerReport1.resx">
+      <DependentUpon>XtraSchedulerReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dmSchedule.xsc">
+      <DependentUpon>dmSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="dmSchedule.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dmSchedule.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dmSchedule.xss">
+      <DependentUpon>dmSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="dmDoctor.xsc">
+      <DependentUpon>dmDoctor.xsd</DependentUpon>
+    </None>
+    <None Include="dmDoctor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dmDoctor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dmDoctor.xss">
+      <DependentUpon>dmDoctor.xsd</DependentUpon>
+    </None>
+    <None Include="qWorkPlace.xsc">
+      <DependentUpon>qWorkPlace.xsd</DependentUpon>
+    </None>
+    <None Include="qWorkPlace.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qWorkPlace.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qWorkPlace.xss">
+      <DependentUpon>qWorkPlace.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete24_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_edit_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new16_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new24_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh24_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sertif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_32x32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_32x32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_play_32x32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player_stop_32x32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_clipboard24_h.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_clipboard24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_clipboard24.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_clipboard24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_48x48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
