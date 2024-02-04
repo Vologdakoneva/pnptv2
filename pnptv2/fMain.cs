@@ -360,7 +360,7 @@ namespace pnptv
             if (Screen.AllScreens.Length < Convert.ToInt32((qVidgetInMonBindingSource.Current as DataRowView)["IDMON"]))
             {
                 idmonitor = 1; 
-                MessageBox.Show("Число мониторов менее, чем требуется. Показ будет на первом мониторе");
+                MessageBox.Show("Число мониторов менее, чем требуется. Показ будет на первом мониторе"); 
             }
             else
             {
